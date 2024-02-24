@@ -1,5 +1,6 @@
 1. GraphQL services for example:
 
+i.
 `
 mutation CreateJobDescription($input: JobDescriptionCreationInput!) {
   createJobDescription(input: $input) {
@@ -26,6 +27,7 @@ query GetJobDescriptions {
 }
 `
 
+ii.
 `
 query GetJobDescription($id : ID!) {
  jobDescription(id : $id) {
@@ -39,6 +41,7 @@ query GetJobDescription($id : ID!) {
 }
 `
 
+iii.
 `
 mutation UpdateJobDescription($id: ID!, $input: JobDescriptionUpdateInput!) {
   updateJobDescription(id: $id, input: $input) {
@@ -52,6 +55,7 @@ mutation UpdateJobDescription($id: ID!, $input: JobDescriptionUpdateInput!) {
 }
 `
 
+iv.
 `
 mutation DeleteJobDescription($id: ID!) {
   deleteJobDescription(id: $id) {
@@ -65,6 +69,8 @@ mutation DeleteJobDescription($id: ID!) {
    
 A. To perfrom Create, use any of the followings as input:
 
+i.
+
 `
 {
   "input": {
@@ -77,6 +83,8 @@ A. To perfrom Create, use any of the followings as input:
 }
 `
 
+ii.
+
 `
 {
   "input": {
@@ -88,6 +96,8 @@ A. To perfrom Create, use any of the followings as input:
   }
 }
 `
+
+iii.
 
 `
 {
