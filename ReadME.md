@@ -1,5 +1,6 @@
 1. GraphQL services for example:
-   
+
+`
 mutation CreateJobDescription($input: JobDescriptionCreationInput!) {
   createJobDescription(input: $input) {
     _id
@@ -10,7 +11,9 @@ mutation CreateJobDescription($input: JobDescriptionCreationInput!) {
     active
   }
 }
+`
 
+`
 query GetJobDescriptions {
  jobDescriptions {
     _id
@@ -21,7 +24,9 @@ query GetJobDescriptions {
     active
  }
 }
+`
 
+`
 query GetJobDescription($id : ID!) {
  jobDescription(id : $id) {
     _id
@@ -32,7 +37,9 @@ query GetJobDescription($id : ID!) {
     active
  }
 }
+`
 
+`
 mutation UpdateJobDescription($id: ID!, $input: JobDescriptionUpdateInput!) {
   updateJobDescription(id: $id, input: $input) {
     _id
@@ -43,18 +50,22 @@ mutation UpdateJobDescription($id: ID!, $input: JobDescriptionUpdateInput!) {
     active
   }
 }
+`
 
+`
 mutation DeleteJobDescription($id: ID!) {
   deleteJobDescription(id: $id) {
 		deletedJobDescriptionID
   }
 }
-
+`
 
 
 2. Query and Mutation calls to perfrom from GraphQL playground:
    
-A. To perfrom Create, use any of the followings as input
+A. To perfrom Create, use any of the followings as input:
+
+`
 {
   "input": {
   	"positionName" : "Programmer",
@@ -64,7 +75,9 @@ A. To perfrom Create, use any of the followings as input
     	"active": true
   }
 }
+`
 
+`
 {
   "input": {
   	"positionName" : "Mechanical Engineer",
@@ -74,7 +87,9 @@ A. To perfrom Create, use any of the followings as input
     	"active": true
   }
 }
+`
 
+`
 {
   "input": {
   	"positionName" : "Science Teacher",
@@ -84,9 +99,11 @@ A. To perfrom Create, use any of the followings as input
     	"active": true
   }
 }
-
+`
 
 B. To Update, you may use (make sure to give a real `id`):
+
+`
 {
   "id": "123abc",
   "input": {
@@ -97,3 +114,4 @@ B. To Update, you may use (make sure to give a real `id`):
     	"active": null
   }
 }
+`
