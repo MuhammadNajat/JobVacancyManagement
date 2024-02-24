@@ -1,4 +1,5 @@
 1. GraphQL services for example:
+   
 mutation CreateJobDescription($input: JobDescriptionCreationInput!) {
   createJobDescription(input: $input) {
     _id
@@ -52,6 +53,7 @@ mutation DeleteJobDescription($id: ID!) {
 
 
 2. Query and Mutation calls to perfrom from GraphQL playground:
+   
 A. To perfrom Create, use any of the followings as input
 {
   "input": {
