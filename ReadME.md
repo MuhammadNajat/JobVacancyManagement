@@ -14,6 +14,7 @@ mutation CreateJobDescription($input: JobDescriptionCreationInput!) {
 }
 `
 
+ii.
 `
 query GetJobDescriptions {
  jobDescriptions {
@@ -27,7 +28,7 @@ query GetJobDescriptions {
 }
 `
 
-ii.
+iii.
 `
 query GetJobDescription($id : ID!) {
  jobDescription(id : $id) {
@@ -41,7 +42,7 @@ query GetJobDescription($id : ID!) {
 }
 `
 
-iii.
+iv.
 `
 mutation UpdateJobDescription($id: ID!, $input: JobDescriptionUpdateInput!) {
   updateJobDescription(id: $id, input: $input) {
@@ -55,7 +56,7 @@ mutation UpdateJobDescription($id: ID!, $input: JobDescriptionUpdateInput!) {
 }
 `
 
-iv.
+v.
 `
 mutation DeleteJobDescription($id: ID!) {
   deleteJobDescription(id: $id) {
@@ -70,7 +71,6 @@ mutation DeleteJobDescription($id: ID!) {
 A. To perfrom Create, use any of the followings as input:
 
 i.
-
 `
 {
   "input": {
@@ -84,7 +84,6 @@ i.
 `
 
 ii.
-
 `
 {
   "input": {
@@ -98,7 +97,6 @@ ii.
 `
 
 iii.
-
 `
 {
   "input": {
