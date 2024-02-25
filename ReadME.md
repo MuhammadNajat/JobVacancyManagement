@@ -123,3 +123,19 @@ B. To Update, you may use (make sure to give a real `id`):
   }
 }
 `
+
+C. To Read all the Job Description, no variables are needed to set. To get a Job Description by its ID:
+
+`
+{
+  "id": "123abc"
+}
+`
+
+D. To Delete by ID:
+
+`
+{
+  "id": "123abc"
+}
+`
