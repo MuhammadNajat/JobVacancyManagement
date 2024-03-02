@@ -1,4 +1,12 @@
-1. GraphQL services for example:
+1. To run the project, run the server written / configured in go.
+Please run the following command from the root directory:
+
+`go run server.go`
+
+The application is expected to be running on `localhost:8080` for testing with GraphQL playground. However, the GraphQL services can be consumed at `localhost:8080/graphql` in case you want to test them using cURL or Postman.
+
+
+2. GraphQL services for example:
 
 i.
 `
@@ -66,9 +74,9 @@ mutation DeleteJobDescription($id: ID!) {
 `
 
 
-2. Query and Mutation calls to perfrom from GraphQL playground:
+3. Query and Mutation calls to perfrom from GraphQL playground:
    
-A. To perfrom Create, use any of the followings as input:
+A. To perfrom `Create`, use any of the followings as input:
 
 i.
 `
@@ -109,7 +117,7 @@ iii.
 }
 `
 
-B. To Update, you may use (make sure to give a real `id`):
+B. To `Update`, you may use (make sure to give a real `id`):
 
 `
 {
@@ -124,7 +132,7 @@ B. To Update, you may use (make sure to give a real `id`):
 }
 `
 
-C. To Read all the Job Description, no variables are needed to set. To get a Job Description by its ID:
+C. To `Read` all the Job Descriptions, no variables are needed to set. To get a Job Description by its ID:
 
 `
 {
@@ -132,7 +140,7 @@ C. To Read all the Job Description, no variables are needed to set. To get a Job
 }
 `
 
-D. To Delete by ID:
+D. To `Delete` by ID:
 
 `
 {
