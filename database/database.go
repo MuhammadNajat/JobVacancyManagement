@@ -125,13 +125,6 @@ func (database Database) GetJobDescriptions() []*model.JobDescription {
 		log.Fatal(error)
 	}
 
-	// Iterate over each job description and make its ID visible
-	for i := range jobDescriptions {
-		// Convert the ObjectID to its hexadecimal representation
-		hexId, _ := primitive.ObjectIDFromHex(jobDescriptions[i].ID)
-		fmt.Println(">=-=-=-> Hex ID: ", hexId)
-	}
-
 	if error = cursor.All(context.TODO(), &jobDescriptions); error != nil {
 		panic(error)
 	}

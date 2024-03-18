@@ -3,7 +3,7 @@
 package model
 
 type JobDescription struct {
-	ID                string   `json:"_id"`
+	ID                string   `bson:"_id" json:"id"`
 	PositionName      string   `json:"positionName"`
 	YearsOfExperience int      `json:"yearsOfExperience"`
 	Skills            []string `json:"skills"`
